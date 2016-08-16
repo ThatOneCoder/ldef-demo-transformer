@@ -156,7 +156,7 @@ public class XMLBuilder {
 
         // create SAX Reader
 
-        String mongoIp = getPropValues("mongo-ip");
+        String mongoIp = (System.getenv("MONGODB_SERVICE_HOST")== null) ? getPropValues("mongo-ip") : System.getenv("MONGODB_SERVICE_HOST");
 
         // create mongo client
         MongoClient mongo = new MongoClient( mongoIp , 27017 );
