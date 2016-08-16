@@ -210,7 +210,7 @@
                     <logClasspath>true</logClasspath>
                     <port>5555</port>
                     <!--<mainClass>hl7integration.camel.MainApp</mainClass>-->
-                    <applicationContext>meta-inf/spring/*.xml</applicationContext>
+                    <applicationContext>META-INF/spring/*.xml</applicationContext>
                 </configuration>
             </plugin>
 
