@@ -148,11 +148,11 @@ public class Processor {
                     String clinicalDoc = content.substring(cdaRootIndex);
 
 
-                    System.out.println(clinicalDoc);
+                    //System.out.println(clinicalDoc);
                     String cleanTop = replace(clinicalDoc, "<ClinicalDocument", "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                             "<?xml-stylesheet type=\"text/xsl\" href=\"hai-display.xsl\"?>\n<ClinicalDocument");
                     String cleanCDA = replace(cleanTop, "</root>", "");
-                    System.out.println(cleanCDA);
+                    //System.out.println(cleanCDA);
                     String now = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
                     try {
                         FileUtils.writeStringToFile(new File(cda_dir + "/" + id + "--" +  now + ".xml"), cleanCDA);

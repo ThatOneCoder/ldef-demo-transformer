@@ -266,7 +266,7 @@ public class XMLBuilder {
 
             enclosedCombinedXml = replace(enclosedCombinedXml, "^~\\&", "^~\\&amp;");
 
-            System.out.println(enclosedCombinedXml);
+            //System.out.println(enclosedCombinedXml);
             try {
                 FileUtils.writeStringToFile(new File(comb_dir +"/" + id + "-source.xml"), enclosedCombinedXml);
                 System.out.println("wrote to " + comb_dir + "/" + id + ".xml");
