@@ -34,7 +34,7 @@ public class Processor {
         String haidisplay_file = getPropValues("haidisplay-file");
         String comb_dir = getPropValues("combined-xml-dir");
         String mal_dir = getPropValues("malformed-xml-dir");
-        String cda_dir = getPropValues("cda-dir") + "/" + stopwatchStart;
+        String cda_dir = getPropValues("cda-dir"); //+ "/" + stopwatchStart;
 
         // hai-display must be in the same directory as the final CDAs for them to be displayed properly
         File sourceHai = new File(haidisplay_file);
